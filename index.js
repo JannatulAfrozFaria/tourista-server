@@ -93,6 +93,13 @@ async function run() {
         res.send(result);
     })
 
+    //using fetch and useSTate
+    //route for myList----Private Route By Email
+    app.get("/myList/:email", async(req,res)=>{
+        const query = {email: req.params.email }
+        const result = await spotCollection.find(query).toArray();
+        res.send(result);
+    })
     //--------COLLECTION--2-------
     app.get('/countries2',async(req,res)=>{
         const cursor = countriesCollection2.find();

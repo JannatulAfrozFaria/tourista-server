@@ -95,7 +95,7 @@ async function run() {
       res.send(result);
     });
 
-    //using fetch and useSTate
+    //using fetch & useSTate
     //route for myList----Private Route By Email
     app.get("/myList/:email", async (req, res) => {
       const query = { email: req.params.email };
